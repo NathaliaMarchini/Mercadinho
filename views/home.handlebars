@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+    <div class="container">
+        <a class="navbar-brand text-warning" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/lista">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<h1 class="text-warning">Bem vindo!</h1>
+
+{{!-- <a class="mb-4 d-block link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-warning" href="/lista">
+    Ir para página de produtos
+</a> --}}
+
+<form action="/lista/insertProdutos" method="post">
+    <div class="form-group mb-3">
+        <label for="produto">Produto:</label>
+        <input type="text" class="form-control" id="produto" name="Nome">
+    </div>
+    <div class="form-group mb-3">
+        <label for="preco">Preço:</label>
+        <input type="text" class="form-control" id="preco" name="preco" >
+    </div>
+    <div class="form-group mb-3">
+        <label for="descricao">Descrição:</label>
+        <input type="text" class="form-control" id="descricao" name="descricao">
+    </div>
+    <div class="form-group mb-3">
+        <button type="submit" class="btn btn-warning mr-3"> Enviar</button>
+        <button type="reset" class="btn btn-light border-warning">Limpar</button>
+    </div>
+</form>

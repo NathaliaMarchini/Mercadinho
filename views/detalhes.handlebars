@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container ">
+        <a class="navbar-brand text-warning" href="#">Detalhes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/lista">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center ">
+        <div class="card col-md-5 text-center mx-auto border border-warning mt-4 ">
+            <div class="card-body ">
+                <h1 class="text-warning text-center">Produto:</h1>
+                <h5 class="card-title">{{detalhes.Nome}}</h5>
+                <strong>{{detalhes.preco}}</strong>
+                <p class="card-text">{{detalhes.descricao}}</p>
+                <form action="/lista/remove/{{detalhes.produtoID}}" method="post">
+                    <input type="submit" value="Remover" class="btn btn-light border-warning">
+                </form>
+                <a href="/detalhes/edit/{{detalhes.produtoID}}" class="btn btn-info btn-warning mt-3">Editar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
